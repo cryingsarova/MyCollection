@@ -9,40 +9,40 @@ public class TestClass {
         ArrayList<Integer> arrayList = new ArrayList<>();
         LinkedList<Integer> linkedList = new LinkedList<>();
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             arrayList.add(random.nextInt());
         }
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             linkedList.add(random.nextInt());
         }
 
         long startTime = System.nanoTime();
-        arrayList.add(50000,2);
+        arrayList.add(2);
         long estimatedTime = System.nanoTime() - startTime;
-        System.out.println("arrayList adding one element =  "+ estimatedTime);
+        System.out.println("arrayList adding =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedList.add(50000,2);
+        linkedList.add(2);
         estimatedTime = System.nanoTime() - startTime;
-        System.out.println("linkedList adding one element =  "+ estimatedTime+'\n');
+        System.out.println("linkedList adding =  "+ estimatedTime+'\n');
 
         startTime = System.nanoTime();
-        arrayList.indexOf(2);
+        arrayList.add(500000,2);
         estimatedTime = System.nanoTime() - startTime;
-        System.out.println("arrayList searching one element =  "+ estimatedTime);
+        System.out.println("arrayList adding in middle =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedList.indexOf(2);
+        linkedList.add(500000,2);
         estimatedTime = System.nanoTime() - startTime;
-        System.out.println("linkedList searching one element =  "+ estimatedTime+'\n');
+        System.out.println("linkedList adding in middle =  "+ estimatedTime+'\n');
 
         startTime = System.nanoTime();
-        arrayList.remove(2);
+        arrayList.remove(500000);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("arrayList removing one element =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedList.remove(2);
+        linkedList.remove(500000);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("linkedList removing one element =  "+ estimatedTime+'\n');
 
@@ -51,15 +51,15 @@ public class TestClass {
         LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>();
         TreeSet<Integer> treeSet = new TreeSet<>();
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             hashSet.add(random.nextInt());
         }
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             linkedHashSet.add(random.nextInt());
         }
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             treeSet.add(random.nextInt());
         }
 
@@ -80,33 +80,33 @@ public class TestClass {
 
 
         startTime = System.nanoTime();
-        hashSet.contains(2);
+        hashSet.contains(50);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("HashSet searching =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedHashSet.contains(2);
+        linkedHashSet.contains(50);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("LinkedHashSet searching =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        treeSet.contains(2);
+        treeSet.contains(50);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("TreeSet searching =  "+ estimatedTime+'\n');
 
 
         startTime = System.nanoTime();
-        hashSet.remove(2);
+        hashSet.remove(50);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("HashSet removing =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedHashSet.remove(2);
+        linkedHashSet.remove(50);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("LinkedHashSet removing =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        treeSet.remove(2);
+        treeSet.remove(50);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("TreeSet removing =  "+ estimatedTime);
 
@@ -116,30 +116,30 @@ public class TestClass {
         LinkedHashMap<Integer, Float> linkedHashMap = new LinkedHashMap<>();
         TreeMap<Integer,Float> treeMap = new TreeMap<>();
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             hashMap.put(random.nextInt(),random.nextFloat());
         }
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             linkedHashMap.put(random.nextInt(),random.nextFloat());
         }
 
-        for(int i = 0; i < 100000; i++){
+        for(int i = 0; i < 1000000; i++){
             treeMap.put(random.nextInt(),random.nextFloat());
         }
 
         startTime = System.nanoTime();
-        hashMap.put(5,5.5f);
+        hashMap.put(500,5.5f);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("HashMap adding =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedHashMap.put(5,5.5f);
+        linkedHashMap.put(500,5.5f);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("LinkedHashMap adding =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        treeMap.put(5,5.5f);
+        treeMap.put(500,5.5f);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("TreeMap adding =  "+ estimatedTime+'\n');
 
@@ -159,17 +159,17 @@ public class TestClass {
         System.out.println("TreeMap searching =  "+ estimatedTime+'\n');
 
         startTime = System.nanoTime();
-        hashMap.remove(5);
+        hashMap.remove(500);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("HashMap removing =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        linkedHashMap.remove(5);
+        linkedHashMap.remove(500);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("LinkedHashMap removing =  "+ estimatedTime);
 
         startTime = System.nanoTime();
-        treeMap.remove(5);
+        treeMap.remove(500);
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("TreeMap removing =  "+ estimatedTime+'\n');
     }

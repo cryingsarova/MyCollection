@@ -6,7 +6,9 @@ import java.util.Random;
 
 public class MainClass {
     public static void main(String[] args) {
-        /*MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
+
+
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         System.out.println("+\n******** First block ********\n");
         //Тест операций
         myLinkedList.add(0);
@@ -69,7 +71,10 @@ public class MainClass {
         startTime = System.nanoTime();
         linkedList.remove(50000);
         estimatedTime = System.nanoTime() - startTime;
-        System.out.println("standart list remove =  "+ estimatedTime+'\n');*/
+        System.out.println("standart list remove =  "+ estimatedTime+'\n');
+
+
+        //Сравнение коллекций
         TestClass.test();
 
 
